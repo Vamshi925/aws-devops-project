@@ -32,3 +32,18 @@ connection.connect(err => {
     console.log("Connected to RDS")
   }
 })
+
+const AWS = require("aws-sdk")
+
+const s3 = new AWS.S3()
+
+const params = {
+  Bucket: "devops-project-vamshi-bucket",
+  Key: "sample.txt",
+  Body: "Hello from DevOps App"
+}
+
+s3.upload(params, (err, data) => {
+  if (err) console.log(err)
+  else console.log("Uploaded:", data.Location)
+})
