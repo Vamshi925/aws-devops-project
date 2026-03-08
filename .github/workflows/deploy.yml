@@ -25,7 +25,7 @@ jobs:
 
       - name: Build Docker Image
         run: |
-          docker build -t devops-node-app .
+          docker build --no-cache -t devops-node-app .
 
       - name: Tag Docker Image
         run: |
