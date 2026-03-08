@@ -6,6 +6,7 @@ app.get("/", (req, res) => {
   res.send("DevOps AWS Project - Phase 1 Running 🚀");
 });
 
+
 app.get("/health", (req, res) => {
   res.status(200).send("OK");
 });
